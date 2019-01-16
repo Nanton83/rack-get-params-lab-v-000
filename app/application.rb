@@ -29,7 +29,7 @@ class Application
         @@cart << item
         resp.write "added #{item}"
       end
-    end 
+    end
 
     elsif req.path.match(/search/)
       search_term = req.params["q"]
