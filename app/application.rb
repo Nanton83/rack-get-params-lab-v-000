@@ -28,11 +28,11 @@ class Application
 
       @@items.each do |item|
 
-        if !@@items.include?(item_to_add)
-          resp.write "We don't have that item"
+        if item_to_add == item
+          @@cart << item_to_add
+          resp.write "added #{"item_to_add"}"
         else
-        @@cart << item_to_add
-        resp.write "added #{"item_to_add"}"
+          resp.write "We don't have that item"
       end
     end
 
