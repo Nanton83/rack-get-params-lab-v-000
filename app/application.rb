@@ -23,8 +23,10 @@ class Application
 
     elsif req.path.match(/add/)
       @@items.each do |item|
+        if @@items.include?("#{item}")
         @@cart << item
         resp.write "added #{item}"
+      else resp.write "We don't have that item"
       end
 
     elsif req.path.match(/search/)
