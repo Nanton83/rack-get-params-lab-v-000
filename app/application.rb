@@ -23,7 +23,7 @@ class Application
       end
 
     elsif req.path.match(/add/)
-      
+
       @@items.each do |item|
         if !@@items.include?(item)
           resp.write "We don't have that item"
