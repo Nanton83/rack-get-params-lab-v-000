@@ -27,7 +27,7 @@ class Application
       item_to_add = req.params["item"]
 
       @@items.each do |item|
-
+binding.pry 
         if !@@items.include?(item)
           resp.write "We don't have that item"
         else
