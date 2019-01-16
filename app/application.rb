@@ -27,7 +27,7 @@ class Application
           resp.write "We don't have that item"
         else
         @@cart << item
-        resp.write "added #{item}"
+        resp.write "added #{item}\n"
       end
     end
 
