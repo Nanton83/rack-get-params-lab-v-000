@@ -24,7 +24,9 @@ class Application
 
     elsif req.path.match(/add/)
 
-      @@items.each do |item|
+      item_to_add = req.params["item"]
+
+      items.each do |item|
         binding.pry
         if !@@items.include?(item)
           resp.write "We don't have that item"
